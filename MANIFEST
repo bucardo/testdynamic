@@ -1,0 +1,11 @@
+SIGNATURE
+Dynamic.pm
+Dynamic.pm.html
+README
+LICENSE
+META.yml
+MANIFEST
+MANIFEST.SKIP
+Makefile.PL
+.perlcriticrc
+t/01dynamic.t
