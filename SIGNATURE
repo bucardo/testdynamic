@@ -1,1 +1,32 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.55.
 
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: RIPEMD160
+
+SHA1 767028e9c89445bb6ab6ea54f00c90a6aeeb690c .perlcriticrc
+SHA1 f10072b2e75a43a6e2b76aa52be164f6d72ae363 Dynamic.pm
+SHA1 1cda3251d3c4383b036a6f5506d1d6f1efb3f278 Dynamic.pm.html
+SHA1 d47a687df814febf8ed84b16c6d78cd50a200067 LICENSE
+SHA1 a951a9453ea37aa87d7db1cba69c6bd2a0dfe16e MANIFEST
+SHA1 2bcf50dd78724c5aad133408a779bbc4e8f5b7a2 MANIFEST.SKIP
+SHA1 0046d8638e251693d6b6d0d34d93b398ee32d02e META.yml
+SHA1 e45d6eb071ba094c08d4c17a17ed8e0340d45052 Makefile.PL
+SHA1 bfd40ea253f8655400aef50d8f69f03b5dbc8e09 README
+SHA1 a28a4bad54bd0456ca83c3bc087d141a4d8e09d2 t/01dynamic.t
+-----BEGIN PGP SIGNATURE-----
+
+iD8DBQFG9VOnvJuQZxSWSsgRA89ZAJwKYWzp+xBRq6vHxPaARLChsDUVYACgquTF
+nvGwpRTCcDf7CsKSImobSSI=
+=8tdY
+-----END PGP SIGNATURE-----
