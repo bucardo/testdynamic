@@ -524,6 +524,12 @@ For a small and simple test script, use of Test::Dynamic may be overkill.
 
 Bugs should be reported to the author.
 
+=head1 WEBSITE
+
+The latest information on this module can be found at:
+
+  http://bucardo.org/test_dynamic/
+
 =head1 DEVELOPMENT
 
 The latest development version can be checked out via git as:
