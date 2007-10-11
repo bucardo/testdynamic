@@ -5,7 +5,7 @@ use warnings;
 
 package Test::Dynamic;
 
-our $VERSION = '1.3.2';
+our $VERSION = '1.3.3';
 
 sub count_tests {
 
@@ -326,7 +326,7 @@ Test::Dynamic - Automatic test counting for Test::More
 
 =head1 VERSION
 
-This documents version 1.3.2 of the Test::Dynamic module
+This documents version 1.3.3 of the Test::Dynamic module
 
 =head1 SYNOPSIS
 
