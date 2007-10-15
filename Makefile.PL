@@ -19,5 +19,7 @@ WriteMakefile(
 package MY;
 sub manifypods {
 	my $after = "\t \$(NOECHO) pod2html Dynamic.pm > Dynamic.pm.html\n\t\$(NOECHO) \$(RM_F) pod*.tmp pm_to_blib\n";
+	$after .= qq{\t\$(NOECHO) \$(PERL) -pi -e "s/<link.*?>//" Dynamic.pm.html\n};
+	$after .= qq{\t\$(NOECHO) \$(ECHO) Created Dynamic.pm.html\n};
 	return shift->SUPER::manifypods(@_) . $after;
 }

@@ -1,9 +1,16 @@
-#!perl
-
-use strict;
-use warnings;
+# -*-cperl-*-
+#
+# Copyright 2006-2007 Greg Sabino Mullane <greg@endpoint.com>
+#
+# Test::Dynamic allows somewhat automatic counting of your tests for Test::More
+#
 
 package Test::Dynamic;
+
+use 5.008003;
+use utf8;
+use strict;
+use warnings;
 
 our $VERSION = '1.3.3';
 
@@ -25,7 +32,10 @@ sub count_tests {
 	## Some have both: foobar() ## TEST_COPY TESTCOUNT + 5
 	## To skip entire blocks entirely, use ## START_SKIP_TESTCOUNTING, then ## STOP_SKIP_TESTCOUNTING
 
+	my $self = shift;
 	my $arg = shift;
+
+	ref $arg eq 'HASH' or die qq{Argument must be a hashref\n};;
 
 	my $fh = $arg->{filehandle} || die "Need a filehandle argument\n";
 
@@ -56,7 +66,9 @@ sub count_tests {
 	my $lastline = 0;
 	for my $pass (1..2) {
 		seek($fh,0,0);
-		1 while <$fh> !~ /^use Test::Dynamic/;
+		if ($arg->{skipuseline}) {
+			1 while <$fh> !~ /^use Test::Dynamic/;
+		}
 		$firstline ||= $.;
 		my $line = $firstline;
 		my $currentsub = 'MAIN';
@@ -392,6 +404,11 @@ you can add your own here which will be counted as a single test for purposes of
 The input should be an arrayref of terms, for example:
 
   local => [qw/foo bar baz/]
+
+=item B<skipuseline>
+
+Optional, empty by default. If set, all lines until one that begins with 'use Test::Dynamic' 
+are skipped.
 
 =back
 
