@@ -1,5 +1,5 @@
 
-## perlcritic file for DBIx::Safe
+## perlcritic file for Test::Dynamic
 ## Usage: perlcritic -profile <thisfile> <scriptname>
 
 verbose = 8
