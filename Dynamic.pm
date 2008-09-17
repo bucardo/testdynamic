@@ -551,7 +551,7 @@ The latest information on this module can be found at:
 
 The latest development version can be checked out via git as:
 
-  git-clone http://bucardo.org/testdynamic.git/
+  git clone http://bucardo.org/testdynamic.git/
 
 =head1 AUTHOR
 
